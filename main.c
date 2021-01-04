@@ -6,12 +6,12 @@
 int usage()
 {
     fprintf(stderr, "\n");
-    fprintf(stderr, "About : Merge VCF GT.\n");
+    fprintf(stderr, "About : Merge VCF GT PL.\n");
     fprintf(stderr, "Version : 0.0.1, build with htslib version : %s\n", hts_version());
     fprintf(stderr, "Usage : vcfpaste -s <site_vcf> -1 <prior_vcf> -2 <behind_vcf> -o <out_vcf>\n");
-    fprintf(stderr, "   -s <file>            configure file, include annotations and tags, see man page for details\n");
-    fprintf(stderr, "   -1 <file>            prior_vcf (vcf.gz), 将该文件中genotype信息合并至site_vcf， 若和behind_vcf有相同位点，优先使用该文件 [request]\n");
-    fprintf(stderr, "   -2 <file>            behind_vcf (vcf.gz), 将该文件中genotype信息合并至site_vcf [request]\n");
+    fprintf(stderr, "   -s <file>            sites vcf (refpanel sites) [request]\n");
+    fprintf(stderr, "   -1 <file>            prior_vcf (snps vcf.gz), 将该文件中genotype信息合并至site_vcf， 若和behind_vcf有相同位点，优先使用该文件 [request]\n");
+    fprintf(stderr, "   -2 <file>            behind_vcf (indels vcf.gz), 将该文件中genotype信息合并至site_vcf [request]\n");
     fprintf(stderr, "   -o <file>            write output to a file [request]\n");
     fprintf(stderr, "   -h                   print help info\n");
     fprintf(stderr, "\n");
